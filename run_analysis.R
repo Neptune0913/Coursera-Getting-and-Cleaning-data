@@ -39,6 +39,5 @@ smartphonedata$subjects <- factor(smartphonedata$subjects)
 dim(smartphonedata)
 spsmart <- split(smartphonedata[,1:79],smartphonedata[,80:81])
 spmean <- sapply(spsmart,colMeans)
-spmean <- t(spmean)
 write.table(spmean, "tidy.txt", row.names = FALSE)
 
